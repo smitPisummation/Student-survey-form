@@ -1,0 +1,309 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --input-border: 1px solid rgb(176, 176, 176);
+    --input-border-radius: 3px;
+    --input-padding: 0.5rem;
+    --input-hover-border-color: rgb(37, 37, 245);
+    --input-blur: 0px 0px 3px 1px rgb(99, 99, 239);
+
+
+    --label-color: rgb(92, 92, 92);
+}
+
+body {
+    width: 100vw;
+    /* overflow-x: hidden; */
+    color: rgb(92, 92, 92);
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    /* -ms-overflow-style: none;  */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* margin-bottom: 5%; */
+}
+
+main p {
+    /* padding: 2% 0% 2% 0%; */
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(59, 57, 57);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: sticky;
+    top: 0px; */
+}
+
+header>p {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+form {
+    height: 100%;
+    width: auto;
+    margin: 5%;
+    /* background-color: rgb(182, 181, 181); */
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+
+
+}
+
+.scl-name-container {
+    padding: 2%;
+}
+
+.sclname {
+    border: none;
+    border-bottom: 1px solid rgb(176, 176, 176);
+    background-color: transparent;
+    width: 100%;
+    font-size: 1rem;
+
+}
+
+.sclname:focus {
+    outline: none;
+}
+
+.name-container {
+
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding: 2%;
+
+
+}
+
+label {
+    color: var(--label-color);
+    font-weight: 500;
+    display: block;
+}
+
+.lname,
+.fname {
+    width: 65vw;
+}
+
+#sclname {
+    width: 98%;
+}
+
+.field {
+    border: var(--input-border);
+    border-radius: var(--input-border-radius);
+    padding-left: var(--input-padding);
+    height: 2.5rem;
+
+}
+
+input[type=text] {
+    width: 50%;
+    margin-top: 2%;
+}
+
+textarea {
+    border: var(--input-border);
+    border-radius: var(--input-border-radius);
+    padding-left: var(--input-padding);
+    margin-top: 1rem;
+    
+
+}
+
+
+
+.field:hover,
+textarea:hover {
+    border-color: var(--input-hover-border-color);
+    box-shadow: var(--input-blur);
+    outline: var(--input-hover-border-color);
+
+}
+
+label {
+    padding: 10px 0px 10px 0px
+}
+
+.dob {
+
+    color: gray;
+}
+
+.dob-container {
+    padding: 0% 0% 1% 2%;
+    /* height: 13vh; */
+
+}
+.not-like-container,.feedback-container,.comments-container{
+    padding: 1%;
+}
+
+
+select {
+    width: 60%;
+    height: 25px;
+
+}
+
+#select-container {
+    padding: 2%;
+    
+}
+
+hr {
+    margin: 20px 0px 20px 0px;
+}
+
+.title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgb(53, 53, 53);
+}
+
+.table {
+    overflow-x: scroll;
+    /* border: 1px solid red; */
+
+}
+
+.table-one-container,
+.table-two-container,
+.table-three-container,
+.recommendation-container {
+    padding: 1rem;
+}
+
+input[type=radio] {
+    height: 1.3rem;
+    width: 1.3rem;
+}
+
+tr,
+th,
+td {
+    /* border: 1px solid rgb(176, 176, 176); */
+    border-top: 1px solid rgb(176, 176, 176);
+    border-right: 1px solid rgb(176, 176, 176);
+}
+
+th:first-child {
+    border-left: 1px solid rgb(176, 176, 176);
+}
+
+tr:last-child th {
+    border-bottom: 1px solid rgb(176, 176, 176);
+}
+
+
+
+th {
+    font-size: 0.8rem;
+    padding: 0.8rem;
+    color: rgb(92, 92, 92);
+}
+
+.recommendation-semi-container {
+    display: flex;
+    align-items: center;
+    gap: 2%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+button[type=submit] {
+    background-color: rgb(9, 167, 9);
+    color: white;
+    border-radius: 0.7rem;
+    border: none;
+    padding: 0.7rem;
+    width: 60%;
+}
+
+
+@media screen and (min-width:1000px) {
+    body {
+        overflow-x: hidden;
+
+    }
+
+    main {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-container {
+        height: 100%;
+        width: 70vw;
+        border: 2px solid;
+    }
+    
+
+    .table {
+        overflow-x: auto;
+
+        /* border: 1px solid; */
+    }
+
+    table {
+        width: 100%;
+    }
+
+    input[type=text] {
+        width: 45%;
+    }
+
+    hr {
+        margin: 50px 0px 50px 0px;
+
+    }
+
+    .name-inner-container {
+        display: flex;
+        justify-content: center;
+        gap: 10%;
+    }
+
+    #studentInfo {
+        width: 40%;
+    }
+}
+
+
+@media screen and (min-width:550px) {
+
+    .name-inner-container {
+        display: flex;
+        justify-content: center;
+        gap: 10%;
+    }
+    input[type=date] {
+        width: 30%;
+    }
+    textarea{
+        width: 70%;
+    }
+}

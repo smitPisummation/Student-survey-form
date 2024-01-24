@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./studentSurvey.css">
+
+</head>
+
+<body>
+    <main>
+        <div class="main-container">
+            <header>
+                <p>STUDENT SURVEY</p>
+            </header>
+            <form action="" name="studentSurvey" autocomplete="off" id="studentSurvey">
+                <div class="scl-name-container" id="scl-name-container">
+                    <label for="sclname"> School Name </label>
+                    <input type="text" class="sclname " id="sclname" onfocus="funAreaFocus('scl-name-container')"
+                        onblur="funAreaBlur('scl-name-container')">
+                </div>
+                <div class="name-container" id="nameContainer">
+                    <label for="stname"> Student Name </label>
+                    <div class="name-inner-container">
+                        <input type="text" name="fname" onfocus="funAreaFocus('nameContainer')"
+                            onblur="funAreaBlur('nameContainer')" class="fname field" placeholder="First Name">
+                        <input type="text" name="lname" class="lname field" placeholder="Last Name"
+                            onfocus="funAreaFocus('nameContainer')" onblur="funAreaBlur('nameContainer')">
+                    </div>
+                </div>
+                <div class="dob-container" id="dob-container">
+                    <label for="dob" style="padding-bottom: 10px;">Date Of Birth </label>
+                    <input type="date" name="dob" class="field dob" id="dob" onfocus="funAreaFocus('dob-container')"
+                        onblur="funAreaBlur('dob-container')" value="2023-12-01">
+                </div>
+                <div class="select-container" id="select-container">
+                    <label for="studentInfo">How long have you been a student here? </label>
+                    <select name="studentInfo" class="field" id="studentInfo" onfocus="funAreaFocus('select-container')"
+                        onblur="funAreaBlur('select-container')">
+                        <option value="select">Please select</option>
+                        <option value="n<1mm">Less than a month</option>
+                        <option value="1mm-6mm">1 to 6 months</option>
+                        <option value="6mm-12mm">6 months to 1 year</option>
+                        <option value="12mm<n">More than one year</option>
+                        <option value="1yr-3yr">1-3 Years</option>
+                        <option value="3yr<n">More than 3 years</option>
+                    </select>
+                </div>
+                <hr>
+
+                <p class="title">Please rate the following aspects of your education.</p>
+                <div class="table-container table-one-container" id="table-one-container">
+                    <p class="">Curriculum and classes for the term</p>
+                    <div class="table-one table" id="table-one table">
+                        <table cellspacing="0px">
+                            <tr>
+                                <th style="border: none; border-right: 1px solid rgb(176, 176, 176);"></th>
+                                <th>Strongly Disagdree</th>
+                                <th>Disagree</th>
+                                <th>Neutral</th>
+                                <th>Agree</th>
+                                <th>Strongly Agree</th>
+                            </tr>
+                            <tr>
+                                <th>The class descriptions accurately described the content.</th>
+                                <th><input type="radio" name="description-accurancy" id="description-accurancy-one"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')"></th>
+                                <th><input type="radio" name="description-accurancy" id="description-accurancy-two"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')"></th>
+                                <th><input type="radio" name="description-accurancy" id="description-accurancy-three"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')"></th>
+                                <th><input type="radio" name="description-accurancy" id="description-accurancy-four"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')"></th>
+                                <th><input type="radio" name="description-accurancy" id="description-accurancy-five"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')"></th>
+                            </tr>
+                            <tr>
+                                <th>I was academically prepared for the classes. </th>
+                                <th><input type="radio" name="academically-preparation"
+                                        id="academically-preparation-one" onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" />
+                                </th>
+                                <th><input type="radio" name="academically-preparation"
+                                        id="academically-preparation-two" onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" />
+                                </th>
+                                <th><input type="radio" name="academically-preparation"
+                                        id="academically-preparation-three"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" />
+                                </th>
+                                <th><input type="radio" name="academically-preparation"
+                                        id="academically-preparation-four" onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" />
+                                </th>
+                                <th><input type="radio" name="academically-preparation"
+                                        id="academically-preparation-five" onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" />
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>The class sizes were appropriate. </th>
+                                <th><input type="radio" name="class-size" id="class-size-one"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                                <th><input type="radio" name="class-size" id="class-size-two"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                                <th><input type="radio" name="class-size" id="class-size-three"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                                <th><input type="radio" name="class-size" id="class-size-four"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                                <th><input type="radio" name="class-size" id="class-size-five"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                            </tr>
+                            <tr>
+                                <th>The classes started and ended on time.</th>
+                                <th><input type="radio" name="time-management" id="time-management-one"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                                <th><input type="radio" name="time-management" id="time-management-two"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                                <th><input type="radio" name="time-management" id="time-management-three"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                                <th><input type="radio" name="time-management" id="time-management-four"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                                <th><input type="radio" name="time-management" id="time-management-five"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                            </tr>
+                            <tr>
+                                <th>The classes increased my knowledge of the subject matter.</th>
+                                <th><input type="radio" name="knowledge" id="knowledge-one"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                                <th><input type="radio" name="knowledge" id="knowledge-two"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                                <th><input type="radio" name="knowledge" id="knowledge-three"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                                <th><input type="radio" name="knowledge" id="knowledge-four"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                                <th><input type="radio" name="knowledge" id="knowledge-five"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                            </tr>
+                            <tr>
+                                <th>The overall quality of the classes was excellent.</th>
+                                <th><input type="radio" name="overall-review" id="overall-review-one"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                                <th><input type="radio" name="overall-review" id="overall-review-two"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                                <th><input type="radio" name="overall-review" id="overall-review-three"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                                <th><input type="radio" name="overall-review" id="overall-review-four"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                                <th><input type="radio" name="overall-review" id="overall-review-five"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+
+                            </tr>
+                            <tr>
+                                <th>I would recommend these classes to other students.</th>
+                                <th><input type="radio" name="recommend" id="recommend-one"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                                <th><input type="radio" name="recommend" id="recommend-two"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                                <th><input type="radio" name="recommend" id="recommend-three"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                                <th><input type="radio" name="recommend" id="recommend-four"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                                <th><input type="radio" name="recommend" id="recommend-five"
+                                        onfocus="funAreaFocus('table-one-container')"
+                                        onblur="funAreaBlur('table-one-container')" /></th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class=" table-container table-two-container" id="table-two-container">
+                    <p class="">Materials</p>
+                    <div class="table-two table" id="table-two-container">
+                        <table cellspacing="0px">
+                            <tr>
+                                <th style="border: none; border-right: 1px solid rgb(176, 176, 176);"></th>
+                                <th>Strongly Disagdree</th>
+                                <th>Disagree</th>
+                                <th>Neutral</th>
+                                <th>Agree</th>
+                                <th>Strongly Agree</th>
+                            </tr>
+                            <tr>
+                                <th>The objectives and requirements for the classes were clearly stated.</th>
+                                <th><input type="radio" name="objectives" id="objectives-one"
+                                        onfocus="funAreaFocus('table-two-container')"
+                                        onblur="funAreaBlur('table-two-container')" /></th>
+                                <th><input type="radio" name="objectives" id="objectives-two"
+                                        onfocus="funAreaFocus('table-two-container')"
+                                        onblur="funAreaBlur('table-two-container')" /></th>
+                                <th><input type="radio" name="objectives" id="objectives-three"
+                                        onfocus="funAreaFocus('table-two-container')"
+                                        onblur="funAreaBlur('table-two-container')" /></th>
+                                <th><input type="radio" name="objectives" id="objectives-four"
+                                        onfocus="funAreaFocus('table-two-container')"
+                                        onblur="funAreaBlur('table-two-container')" /></th>
+                                <th><input type="radio" name="objectives" id="objectives-five"
+                                        onfocus="funAreaFocus('table-two-container')"
+                                        onblur="funAreaBlur('table-two-container')" /></th>
+                            </tr>
+                            <tr>
+                                <th>The instructors demonstrated enthusiasm for the subject matter. </th>
+                                <th><input type="radio" name="instructors-demonstrated"
+                                        id="instructors-demonstrated-one" onfocus="funAreaFocus('table-two-container')"
+                                        onblur="funAreaBlur('table-two-container')" />
+                                </th>
+                                <th><input type="radio" name="instructors-demonstrated"
+                                        id="instructors-demonstrated-two" onfocus="funAreaFocus('table-two-container')"
+                                        onblur="funAreaBlur('table-two-container')" />
+                                </th>
+                                <th><input type="radio" name="instructors-demonstrated"
+                                        id="instructors-demonstrated-three"
+                                        onfocus="funAreaFocus('table-two-container')"
+                                        onblur="funAreaBlur('table-two-container')" />
+                                </th>
+                                <th><input type="radio" name="instructors-demonstrated"
+                                        id="instructors-demonstrated-four" onfocus="funAreaFocus('table-two-container')"
+                                        onblur="funAreaBlur('table-two-container')" />
+                                </th>
+                                <th><input type="radio" name="instructors-demonstrated"
+                                        id="instructors-demonstrated-five" onfocus="funAreaFocus('table-two-container')"
+                                        onblur="funAreaBlur('table-two-container')" />
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>The instructors were available and helpful to students outside of class. </th>
+                                <th><input type="radio" name="instructors-availability"
+                                        id="instructors-availability-one" onfocus="funAreaFocus('table-two-container')"
+                                        onblur="funAreaBlur('table-two-container')" />
+                                </th>
+                                <th><input type="radio" name="instructors-availability"
+                                        id="instructors-availability-two" onfocus="funAreaFocus('table-two-container')"
+                                        onblur="funAreaBlur('table-two-container')" />
+                                </th>
+                                <th><input type="radio" name="instructors-availability"
+                                        id="instructors-availability-three"
+                                        onfocus="funAreaFocus('table-two-container')"
+                                        onblur="funAreaBlur('table-two-container')" />
+                                </th>
+                                <th><input type="radio" name="instructors-availability"
+                                        id="instructors-availability-four" onfocus="funAreaFocus('table-two-container')"
+                                        onblur="funAreaBlur('table-two-container')" />
+                                </th>
+                                <th><input type="radio" name="instructors-availability"
+                                        id="instructors-availability-five" onfocus="funAreaFocus('table-two-container')"
+                                        onblur="funAreaBlur('table-two-container')" />
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class=" table-container  table-three-container" id="table-three-container">
+                    <p class="">School environment</p>
+                    <div class="table-three table" id="table-three-container">
+                        <table cellspacing="0px">
+                            <tr>
+                                <th style="border: none; border-right: 1px solid rgb(176, 176, 176);"></th>
+                                <th>Strongly Disagdree</th>
+                                <th>Disagree</th>
+                                <th>Neutral</th>
+                                <th>Agree</th>
+                                <th>Strongly Agree</th>
+                            </tr>
+                            <tr>
+                                <th>The physical classroom environments were clean and comfortable.</th>
+                                <th><input type="radio" name="classroom-enviroment" id="classroom-enviroment-one"
+                                        onfocus="funAreaFocus('table-three-container')"
+                                        onblur="funAreaBlur('table-three-container')" /></th>
+                                <th><input type="radio" name="classroom-enviroment" id="classroom-enviroment-two"
+                                        onfocus="funAreaFocus('table-three-container')"
+                                        onblur="funAreaBlur('table-three-container')" /></th>
+                                <th><input type="radio" name="classroom-enviroment" id="classroom-enviroment-three"
+                                        onfocus="funAreaFocus('table-three-container')"
+                                        onblur="funAreaBlur('table-three-container')" /></th>
+                                <th><input type="radio" name="classroom-enviroment" id="classroom-enviroment-four"
+                                        onfocus="funAreaFocus('table-three-container')"
+                                        onblur="funAreaBlur('table-three-container')" /></th>
+                                <th><input type="radio" name="classroom-enviroment" id="classroom-enviroment-five"
+                                        onfocus="funAreaFocus('table-three-container')"
+                                        onblur="funAreaBlur('table-three-container')" /></th>
+                            </tr>
+                            <tr>
+                                <th>Library and on-site computers consistently made available. </th>
+                                <th><input type="radio" name="library_computers" id="library_computers-one"
+                                        onfocus="funAreaFocus('table-three-container')"
+                                        onblur="funAreaBlur('table-three-container')" /></th>
+                                <th><input type="radio" name="library_computers" id="library_computers-two"
+                                        onfocus="funAreaFocus('table-three-container')"
+                                        onblur="funAreaBlur('table-three-container')" /></th>
+                                <th><input type="radio" name="library_computers" id="library_computers-three"
+                                        onfocus="funAreaFocus('table-three-container')"
+                                        onblur="funAreaBlur('table-three-container')" /></th>
+                                <th><input type="radio" name="library_computers" id="library_computers-four"
+                                        onfocus="funAreaFocus('table-three-container')"
+                                        onblur="funAreaBlur('table-three-container')" /></th>
+                                <th><input type="radio" name="library_computers" id="library_computers-five"
+                                        onfocus="funAreaFocus('table-three-container')"
+                                        onblur="funAreaBlur('table-three-container')" /></th>
+                            </tr>
+                            <tr>
+                                <th>The common spaces were clean and comfortable. </th>
+                                <th><input type="radio" name="common-space" id="common-space-one"
+                                        onfocus="funAreaFocus('table-three-container')"
+                                        onblur="funAreaBlur('table-three-container')"></th>
+                                <th><input type="radio" name="common-space" id="common-space-two"
+                                        onfocus="funAreaFocus('table-three-container')"
+                                        onblur="funAreaBlur('table-three-container')"></th>
+                                <th><input type="radio" name="common-space" id="common-space-three"
+                                        onfocus="funAreaFocus('table-three-container')"
+                                        onblur="funAreaBlur('table-three-container')"></th>
+                                <th><input type="radio" name="common-space" id="common-space-four"
+                                        onfocus="funAreaFocus('table-three-container')"
+                                        onblur="funAreaBlur('table-three-container')"></th>
+                                <th><input type="radio" name="common-space" id="common-space-five"
+                                        onfocus="funAreaFocus('table-three-container')"
+                                        onblur="funAreaBlur('table-three-container')"></th>
+                            </tr>
+                            <tr>
+                                <th>The school communicated institutional goals and relevant news to students. </th>
+                                <th><input type="radio" name="institutional-goals" id="institutional-goals-one"
+                                        onfocus="funAreaFocus('table-three-container')"
+                                        onblur="funAreaBlur('table-three-container')"></th>
+                                <th><input type="radio" name="institutional-goals" id="institutional-goals-two"
+                                        onfocus="funAreaFocus('table-three-container')"
+                                        onblur="funAreaBlur('table-three-container')"></th>
+                                <th><input type="radio" name="institutional-goals" id="institutional-goals-three"
+                                        onfocus="funAreaFocus('table-three-container')"
+                                        onblur="funAreaBlur('table-three-container')"></th>
+                                <th><input type="radio" name="institutional-goals" id="institutional-goals-four"
+                                        onfocus="funAreaFocus('table-three-container')"
+                                        onblur="funAreaBlur('table-three-container')"></th>
+                                <th><input type="radio" name="institutional-goals" id="institutional-goals-five"
+                                        onfocus="funAreaFocus('table-three-container')"
+                                        onblur="funAreaBlur('table-three-container')"></th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+
+
+                <hr>
+
+
+
+                <div class="recommendation-container" id="recommendation-container">
+                    <p style="padding-bottom: 10px;">How likely are you to recommend our school to a friend or
+                        colleague?</p>
+                    <div class="recommendation-semi-container" id="recommendation-semi-container">
+                        <input type="radio" name="recommendation" class="veryLikely radio" value="veryLikely"
+                            id="veryLikely" onfocus="funAreaFocus('recommendation-container')"
+                            onblur="funAreaBlur('recommendation-container')" />
+                        <label for="veryLikely">Very likely</label>
+                    </div>
+                    <div class="recommendation-semi-container">
+                        <input type="radio" name="recommendation" class="someWhatLikely radio" value="someWhatLikely"
+                            id="someWhatLikely" onfocus="funAreaFocus('recommendation-container')"
+                            onblur="funAreaBlur('recommendation-container')" />
+                        <label for="someWhatLikely"> Somewhat likely </label>
+                    </div>
+
+                    <div class="recommendation-semi-container">
+                        <input type="radio" name="recommendation" class="unsure radio" value="unsure" id="unsure"
+                            onfocus="funAreaFocus('recommendation-container')"
+                            onblur="funAreaBlur('recommendation-container')" />
+                        <label for="unsure">Unsure</label>
+                    </div>
+                    <div class="recommendation-semi-container">
+                        <input type="radio" name="recommendation" class="notVeryLikely radio" value="notVeryLikely"
+                            id="notVeryLikely" onfocus="funAreaFocus('recommendation-container')"
+                            onblur="funAreaBlur('recommendation-container')" />
+                        <label for="notVeryLikely">Not very likely</label>
+                    </div>
+                    <div class="recommendation-semi-container">
+                        <input type="radio" name="recommendation" class="notLikely radio" value="notLikely"
+                            id="notLikely" onfocus="funAreaFocus('recommendation-container')"
+                            onblur="funAreaBlur('recommendation-container')" />
+                        <label for="notLikely">Not likely</label>
+                    </div>
+
+
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 20px; margin-top: 10px;">
+                    <div class="not-like-container" id="not-like-container">
+                        <p class="feed-comment">If not, why?</p>
+                        <textarea name="not-like-textarea" id="not-like-textarea" cols="30" rows="10"
+                            onfocus="funAreaFocus('not-like-container')"
+                            onblur="funAreaBlur('not-like-container')"></textarea>
+                    </div>
+
+
+                    <div class="feedback-container" id="feedback-container">
+                        <p class="feed-comment">What could we do to increase your level of satisfaction?</p>
+                        <textarea name="feedback" id="feedback" cols="30" rows="10"
+                            onfocus="funAreaFocus('feedback-container')"
+                            onblur="funAreaBlur('feedback-container')"></textarea>
+                    </div>
+
+
+                    <div class="comments-container" id="comments-container">
+                        <p class="feed-comment">Additional comments : </p>
+                        <textarea name="comments" id="comments" cols="30" rows="10"
+                            onfocus="funAreaFocus('comments-container')"
+                            onblur="funAreaBlur('comments-container')"></textarea>
+                    </div>
+                </div>
+                <hr>
+
+
+                <div class="button-container " id="button-container">
+                    <button type="submit">Submit</button>
+
+                </div>
+
+
+            </form>
+        </div>
+    </main>
+
+    <script src="./studentSurvey.js"></script>
+</body>
+
+</html>
